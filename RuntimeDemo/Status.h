@@ -2,7 +2,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class User;
+
 @interface Status : NSObject
+
 
 // 写一段程序自动生成属性代码
 @property (nonatomic, assign) NSInteger ID;
@@ -23,7 +26,7 @@
 
 @property (nonatomic, assign) int comments_count;
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) User *user;
 
 @property (nonatomic, strong) NSDictionary *retweeted_status;
 

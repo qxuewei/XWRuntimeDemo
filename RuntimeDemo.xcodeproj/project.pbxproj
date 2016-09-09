@@ -20,6 +20,7 @@
 		2E8FFA101D814E1B00198449 /* status.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FFA0F1D814E1B00198449 /* status.plist */; };
 		2E8FFA131D81665400198449 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FFA121D81665400198449 /* Status.m */; };
 		2E8FFA161D81736D00198449 /* NSObject+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FFA151D81736D00198449 /* NSObject+Model.m */; };
+		2EFFCEDE1D82409100AF7239 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFCEDD1D82409100AF7239 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		2E8FFA121D81665400198449 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		2E8FFA141D81736D00198449 /* NSObject+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Model.h"; sourceTree = "<group>"; };
 		2E8FFA151D81736D00198449 /* NSObject+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Model.m"; sourceTree = "<group>"; };
+		2EFFCEDC1D82409100AF7239 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2EFFCEDD1D82409100AF7239 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 		2E8FF9EB1D81087200198449 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2EFFCEDC1D82409100AF7239 /* User.h */,
+				2EFFCEDD1D82409100AF7239 /* User.m */,
 				2E8FFA111D81665400198449 /* Status.h */,
 				2E8FFA121D81665400198449 /* Status.m */,
 				2E8FFA0F1D814E1B00198449 /* status.plist */,
@@ -183,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFFCEDE1D82409100AF7239 /* User.m in Sources */,
 				2E8FF9F31D81087200198449 /* ViewController.m in Sources */,
 				2E8FFA0E1D814D5100198449 /* NSObject+AutoProperty.m in Sources */,
 				2E8FFA071D8119D100198449 /* UIImage+Image.m in Sources */,
@@ -344,6 +350,7 @@
 				2E8FFA011D81087200198449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

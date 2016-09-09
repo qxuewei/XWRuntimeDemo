@@ -13,6 +13,8 @@
 #import "UIImage+Image.h"
 #import "Car+Cool.h"
 #import "NSObject+AutoProperty.h"
+#import "Status.h"
+#import "NSObject+Model.h"
 
 @interface ViewController ()
 
@@ -32,7 +34,9 @@
     
 //    [self categoryAddPropery];
     
-    [self autoProperty];
+//    [self autoProperty];
+    
+    [self runtimeToModel];
 }
 
 //发送消息
@@ -131,7 +135,29 @@
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil]];
     NSArray *dictArr = dict[@"statuses"];
     // 设计模型属性代码
-    [NSObject printPropertyWithDict:dictArr[0][@"user"]];
+    [NSObject printPropertyWithDict:dictArr[0]];
+}
+
+
+/**
+ *  利用runtime将字典转化为模型
+ *  新建NSObject的分类 利用Runtime将字典转化为模型
+ */
+-(void)runtimeToModel{
+    NSDictionary *fileDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil]];
+    NSArray *fileArr = [fileDict objectForKey:@"statuses"];
+    NSLog(@"%@",fileArr);
+    
+    //将数据数组转化成模型数组
+    __block NSMutableArray *modelArrM = [NSMutableArray array];
+    
+    [fileArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSDictionary *dict = (NSDictionary *)obj;
+        Status *status = [Status modelWithDict:dict];
+        [modelArrM addObject:status];
+    }];
+    
+    NSLog(@"%@",modelArrM);
 }
 
 - (void)didReceiveMemoryWarning {
